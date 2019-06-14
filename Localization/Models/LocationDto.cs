@@ -16,6 +16,7 @@ namespace Localization.Models
       public double Latitude { get; set; }
       public EStatus Status { get; set; }
       public string HelperId { get; set; }
+      public String Time { get; set; }
       public string AdditionalData { get; set; }
    }
 

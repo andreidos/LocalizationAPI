@@ -21,8 +21,18 @@ namespace Localization.DataStores
                Id= Guid.NewGuid(),
                BoardId = "DUMMY",
                IPAddress = "0.0.0.0",
-               Longitude = 13.1234,
-               Latitude = 13.0,
+               Longitude = 25.6052528,
+               Latitude = 45.6534745,
+               Status = EStatus.Awaiting,
+               Time = DateTime.Now.ToString("dddd, dd MMMM yyyy")
+            },
+            new LocationDto()
+            {
+               Id= Guid.NewGuid(),
+               BoardId = "DUMMY 2",
+               IPAddress = "0.0.0.0",
+               Longitude = 25.6052528,
+               Latitude = 45.6534745,
                Status = EStatus.Solved
             }
          };
