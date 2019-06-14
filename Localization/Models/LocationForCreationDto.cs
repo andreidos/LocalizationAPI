@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Localization.Models
+﻿namespace Localization.Models
 {
    public class LocationForCreationDto
    {

@@ -1,15 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Localization.DataStores;
 using Localization.Models;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Localization.Controllers
 {
-    [Route("api/[controller]")]
+   [EnableCors("CorsPolicy")]
+   [Route("api/[controller]")]
     [ApiController]
     public class LocationsController : Controller
     {

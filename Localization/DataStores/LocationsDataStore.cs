@@ -24,12 +24,12 @@ namespace Localization.DataStores
                Longitude = 25.6052528,
                Latitude = 45.6534745,
                Status = EStatus.Awaiting,
-               Time = DateTime.Now.ToString("dddd, dd MMMM yyyy")
+               Time = DateTime.Now.ToString("dd MMMM yyyy - hh:mm tt ")
             },
             new LocationDto()
             {
                Id= Guid.NewGuid(),
-               BoardId = "DUMMY 2",
+               BoardId = "DUMMY 3",
                IPAddress = "0.0.0.0",
                Longitude = 25.6052528,
                Latitude = 45.6534745,
