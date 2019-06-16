@@ -1,8 +1,11 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Localization.Models;
+using Localization.Services;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 
 namespace Localization
 {
@@ -24,6 +27,15 @@ namespace Localization
                    .AllowAnyMethod()
                    .AllowAnyHeader();
          }));
+
+         services.Configure<LocationDatabaseSettings>(
+        Configuration.GetSection(nameof(LocationDatabaseSettings)));
+
+         services.AddSingleton<ILocationDatabaseSettings>(sp =>
+             sp.GetRequiredService<IOptions<LocationDatabaseSettings>>().Value);
+
+         services.AddSingleton<LocationService>();
+
          services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
       }
 
