@@ -46,7 +46,7 @@ namespace Localization.Controllers
          return location;
       }
 
-      [HttpPut("update/{boardid}")]
+      [HttpPatch("update/{boardid}")]
       public IActionResult UpdateStatus(string boardId, [FromQuery] string status, [FromQuery] string helperid)
       {
          EStatus eStatus;
